@@ -54,3 +54,9 @@ footer {
 p {
   text-align: center;
 }
+
+.score {
+  text-align: center;
+  font-family:  'Monoton', cursive;
+  font-size: 20px;
+}

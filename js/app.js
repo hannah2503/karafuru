@@ -7,27 +7,23 @@
 //use math.random to create a changing order of colors  and apply them to the ids
 //user clicks the sequence and computer stores the input
 //comparison between computer sequence and user input - if correct new sequence plays, if not, alert game over, try again.
-// for (let i = a.length; i; i--) {
-//   const j = Math.floor(Math.random() * i);
-//   [a[i - 1], a[j]] = [a[j], a[i - 1]];
-// }
-
-
+// '#9C89B8', '#F0A6CA',
 
 $(() => {
   const $lis = $('li');
   const $square = $('.square');
   const $play = $('#play');
-  const colors = ['#9C89B8', '#F0A6CA', '#EFC3E6', '#F0E6EF', '#B8BEDD'];
+  const colors = [ '#EFC3E6', '#F0E6EF', '#B8BEDD'];
   const originColor = '#FE938C';
+  const $userArray = [];
   let delay = 0;
-
   const level = 3;
   const $squareSequence = [];
+  const $score = $('.score');
 
   function shuffle() {
     for (var i = 0; i < level; i++){
-      $squareSequence.push(Math.floor(Math.random()* 8));
+      $squareSequence.push(Math.floor(Math.random()* 8)+1);
     }
   }
   shuffle();
@@ -53,13 +49,11 @@ $(() => {
     }
   }
 
-  const $userArray = [];
   function userPlay(){
     $square.one('click', function(){
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
       if($userArray.length === 3){
-        console.log('3!');
         console.log($userArray);
         comparison();
       } else{
@@ -76,11 +70,14 @@ $(() => {
     console.log(arr2);
     if (arr1 === arr2){
       console.log('match!');
+      $score.text('Match!');
     } else {
       console.log('not a match');
+      $score.text('Not a match!!');
     }
   }
 
+  //PLAY
   $play.on('click', function() {
     changeColor();
     resetColor();
