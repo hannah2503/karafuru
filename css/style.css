@@ -1,5 +1,7 @@
-/*body {
-}*/
+body {
+  background: #D5B9B2;
+
+}
 
 h1 {
   color: #9D91A3;
@@ -11,8 +13,8 @@ h1 {
 }
 
 main {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   background-color: #EDAF97;
   margin: 0 auto;
 
@@ -23,7 +25,7 @@ li {
   height: 196px;
   margin: 2px;
   background-color: #FE938C;
-  color: #E7E5DF;
+  color: #EEEFD7;
   float: left;
   font-family: sans-serif;
   line-height: 196px;
@@ -32,16 +34,22 @@ li {
 }
 
 button {
-  padding: 10px;
-  margin: 5px;
+  padding: 25px;
+  margin: 50px 150px;
   font-family: sans-serif;
   font-size: 20px;
+  color: white;
+  background-color: #9D91A3;
+  border-radius: 15px;
+
 }
 
 footer {
-  margin: 50px;
-  background-color: pink;
+  margin: 200px 150px;
+  padding: 10px;
+  background-color: #D5B9B2;
   font-family: sans-serif;
+  float:  none;
 }
 
 p {
