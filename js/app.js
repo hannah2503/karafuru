@@ -33,28 +33,31 @@
 //   console.log(a);
 // }
 // shuffle($squareSequence);
+// ($squareSequence[i]).style.background =  colors[Math.floor(Math.random() *colors.length)];
 
 $(() => {
 
-  const $play = $('.button');
-  $play.on('click', function() {
-    console.log('play!');
-  });
-
+  const $play = $('#play');
+  const colors = ['#9C89B8', '#F0A6CA', '#EFC3E6', '#F0E6EF', '#B8BEDD'];
   const colorHistory = [];
   const $lis = $('li');
-  console.log($lis);
-  var colors = ['#9C89B8', '#F0A6CA', '#EFC3E6', '#F0E6EF', '#B8BEDD'];
-  for (var i = 0; i < $lis.length; i++) {
-    const singleSquare = $lis[i];
-    const randomColor = colors[Math.floor(Math.random() *colors.length)];
-    $(singleSquare).css('background-color', `${randomColor}`);
-    colorHistory.push(randomColor);
-    console.log(`in the making --> ${colorHistory}`);
-    // ($squareSequence[i]).style.background =  colors[Math.floor(Math.random() *colors.length)];
+
+  function changeColor(){
+    for (var i = 0; i < $lis.length; i++) {
+      const singleSquare = $lis[i];
+      const $randomColor = colors[Math.floor(Math.random() *colors.length)];
+      $(singleSquare).css('background-color', `${$randomColor}`);
+      colorHistory.push($randomColor);
+      console.log(`in the making --> ${colorHistory}`);
+    }
   }
   console.log(colorHistory);
 
-
+  $play.on('click', function() {
+    console.log('play!');
+    setTimeout(function (){
+      changeColor();
+    }, 2000);
+  });
 
 });
