@@ -7,18 +7,18 @@
 //use math.random to create a changing order of colors  and apply them to the ids
 //user clicks the sequence and computer stores the input
 //comparison between computer sequence and user input - if correct new sequence plays, if not, alert game over, try again.
-// '#9C89B8', '#F0A6CA',
+//
 
 $(() => {
   const $lis = $('li');
   const $square = $('.square');
   const $play = $('#play');
-  const colors = [ '#EFC3E6', '#F0E6EF', '#B8BEDD'];
+  const colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
   const originColor = '#FE938C';
-  const $userArray = [];
+  let $userArray = [];
   let delay = 0;
-  const level = 3;
-  const $squareSequence = [];
+  const level = 5;
+  let $squareSequence = [];
   const $score = $('.score');
 
   function shuffle() {
@@ -32,7 +32,7 @@ $(() => {
   function changeColor() {
     for (var i = 0; i < $squareSequence.length; i++) {
       const singleSquare =$lis[$squareSequence[i]];
-      const randomColor = colors[Math.floor(Math.random() *colors.length)];
+      const randomColor = colors[Math.floor(Math.random() *colors.length)+1];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${randomColor}`);
       }, delay);
@@ -45,15 +45,15 @@ $(() => {
       const singleSquare = $lis[i];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${originColor}`);
-      },  3000);
+      },  3500);
     }
   }
 
   function userPlay(){
-    $square.one('click', function(){
+    $square.on('click', function(){
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
-      if($userArray.length === 3){
+      if($userArray.length === 5){
         console.log($userArray);
         comparison();
       } else{
@@ -70,10 +70,12 @@ $(() => {
     console.log(arr2);
     if (arr1 === arr2){
       console.log('match!');
-      $score.text('Match!');
+      $score.text('It\'s aMatch!');
+      // resetPlay();
     } else {
       console.log('not a match');
       $score.text('Not a match!!');
+      // resetPlay();
     }
   }
 
@@ -83,4 +85,14 @@ $(() => {
     resetColor();
     userPlay();
   });
+
+  //RESETPLAY
+  // function resetPlay(){
+  //   $userArray = 0;
+  //   $squareSequence = 0;
+  //   changeColor();
+  //   resetColor();
+  //   userPlay();
+  // }
+
 });
