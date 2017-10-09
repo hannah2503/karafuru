@@ -8,7 +8,7 @@
 //user clicks the sequence and computer stores the input
 //comparison between computer sequence and user input - if correct new sequence plays, if not, alert game over, try again.
 
-// const $square = $('.square');
+
 // $square.on('click' , function(){
 //   console.log('click!');
 // });
@@ -19,45 +19,98 @@
 //   });
 // });
 
-// const $squareSequence = [];
-// for (let i = 0; i < $square.length; i++) {
-//   $squareSequence.push($square[i].getAttribute('id'));
-// }
-// console.log($squareSequence);
 
-// function shuffle(a) {
-//   for (let i = a.length; i; i--) {
-//     const j = Math.floor(Math.random() * i);
-//     [a[i - 1], a[j]] = [a[j], a[i - 1]];
+
+// function countDown() {
+//   let counter = 11;
+//   const timer = setInterval( () => {
+//     counter--;
+//     console.log(counter);
+//     $('.timer').html(counter);
+//     checkValue();
+//   }, 1000);
+//   function checkValue(){
+//     if (counter <= 0) {
+//       clearInterval(timer);
+//     }
 //   }
-//   console.log(a);
 // }
-// shuffle($squareSequence);
-// ($squareSequence[i]).style.background =  colors[Math.floor(Math.random() *colors.length)];
+
+
+// let colorHistory = [];
+//  console.log($squareSequence);
 
 $(() => {
-
+  const $lis = $('li');
+  const $square = $('.square');
   const $play = $('#play');
   const colors = ['#9C89B8', '#F0A6CA', '#EFC3E6', '#F0E6EF', '#B8BEDD'];
-  const colorHistory = [];
-  const $lis = $('li');
+  const originColor = '#FE938C';
+  let delay = 0;
 
-  function changeColor(){
-    for (var i = 0; i < $lis.length; i++) {
-      const singleSquare = $lis[i];
-      const $randomColor = colors[Math.floor(Math.random() *colors.length)];
-      $(singleSquare).css('background-color', `${$randomColor}`);
-      colorHistory.push($randomColor);
-      console.log(`in the making --> ${colorHistory}`);
+  const $squareSequence = [0,1,2,3,4,5,6,7,8];
+
+  function shuffle(a) {
+    for (let i = a.length; i; i--) {
+      const j = Math.floor(Math.random() * i);
+      [a[i - 1], a[j]] = [a[j], a[i - 1]];
     }
   }
-  console.log(colorHistory);
+
+  shuffle($squareSequence);
+  console.log($squareSequence);
+
+  function changeColor() {
+    for (var i = 0; i < $squareSequence.length; i++) {
+      const singleSquare =$lis[$squareSequence[i]];
+      console.log(singleSquare);
+      const randomColor = colors[Math.floor(Math.random() *colors.length)];
+
+      setTimeout(() => {
+        $(singleSquare).css('background-color', `${randomColor}`);
+        console.log($(singleSquare).css('background-color'));
+      }, delay);
+      delay += 700;
+      console.log(singleSquare);
+    }
+  }
+
+  function resetColor(){
+    for (var i = 0; i < $squareSequence.length; i++) {
+      const singleSquare = $lis[i];
+      setTimeout(() => {
+        $(singleSquare).css('background-color', `${originColor}`);
+      }, delay = 6000);
+    }
+  }
+
+  const $userArray = [];
+  function userPlay(){
+    $square.one('click', function(){
+      console.log(this);
+      // get id attribute value from clicked li
+      // push id value into array $userArray
+      $userArray.push(parseInt($(this).attr('id')));
+      // if number of clicks === 9
+      if($userArray.length === 9){
+        console.log('9!');
+        console.log($userArray);
+        //  compare arrays ()
+      } else{
+        console.log('keep clicking!');
+      }
+
+
+
+    });
+  }
 
   $play.on('click', function() {
-    console.log('play!');
-    setTimeout(function (){
-      changeColor();
-    }, 2000);
+    changeColor();
+    //save sequence to array?
+    resetColor();
+    userPlay();
+    //saved computer array and user input array compared
   });
 
 });
