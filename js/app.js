@@ -1,4 +1,5 @@
 $(() => {
+
   let $userArray = [];
   let $squareSequence = [];
   let delay = 0;
@@ -20,7 +21,6 @@ $(() => {
     console.log('squareSecquence---->', $squareSequence);
   }
   shuffle();
-
   function computerPlay() {
     console.log(`computerplay im hit --> ${$squareSequence.length} `);
     //random color generator
@@ -29,10 +29,8 @@ $(() => {
       randomColor.push(colors[newRandom]);
       colors.splice(newRandom, 1);
     }
-    console.log(randomColor);
     //return the color array to its original state
-    colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
-    console.log(randomColor);
+    colors = ['#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
     //assign random color to a random sequence of squares
     for (var i = 0; i < $squareSequence.length; i++) {
       const colorToAssign = randomColor[i];
@@ -50,10 +48,13 @@ $(() => {
       const singleSquare = $lis[i];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${originColor}`);
-      },  2500);
+      },  2000);
     }
     //call function to allow user to play
-    userPlay();
+    setTimeout(() => {
+      userPlay();
+    }, 1000);
+    
   }
   //function which logs user play
   function userPlay() {
@@ -84,7 +85,7 @@ $(() => {
         setTimeout(() => {
           playAgain();
         }, 1000);
-      }, 1000);
+      }, 2000);
     } else {
       console.log('not a match');
       $matchStatus.text('Game Over');
@@ -94,21 +95,17 @@ $(() => {
       }, 1000);
     }
   }
-
-
   //function to start game
   $button.on('click', function() {
     computerPlay();
     clearDisplay();
   });
-
   //function to call next sequence in game
   function playAgain(){
     $square.off('click');
     computerPlay();
     clearDisplay();
   }
-
   //reset for when play continues
   function reset (){
     $matchStatus.text('');
@@ -126,4 +123,5 @@ $(() => {
     $squareSequence =[];
     randomColor=[];
   }
+
 });
