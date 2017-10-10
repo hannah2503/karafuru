@@ -64,6 +64,7 @@ button {
   color: white;
   background-color: #9D91A3;
   border-radius: 15px;
+  display: block;
 }
 
 
