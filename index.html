@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>KaraFuRu</title>
@@ -11,13 +12,23 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-
 </head>
-<body>
-  <h1>Let's Play!</h1>
-  <p class="score"></p>
-  <main>
 
+<body>
+  <header>
+    <h1>Let's Play!</h1>
+
+    <!-- <div class="timer">
+      10
+    </div> -->
+
+    <div class="score-board">
+      <p>SCORE: <span class="score">0</span></p>
+      <p class="matchStatus"></p>
+    </div>
+  </header>
+
+  <main>
     <ul class="grid">
       <li class='square' id='0'>0</li>
       <li class='square' id='1'>1</li>
@@ -29,18 +40,13 @@
       <li class='square' id='7'>7</li>
       <li class='square' id='8'>8</li>
     </ul>
-
-    <button id='play'>PLAY</button>
-
-
+    <button>PLAY</button>
   </main>
 
-  <aside>
-  </aside>
-
   <footer>
-    <p> &copy; Design by Hannah Cross</p>
+    <p> &copy; Here is a Footer</p>
   </footer>
 
 </body>
+
 </html>

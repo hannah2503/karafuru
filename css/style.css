@@ -12,6 +12,30 @@ h1 {
   font-size: 40px;
 }
 
+p {
+  text-align: center;
+}
+
+
+.score-board {
+  margin: 10px;
+  padding: 10px;
+  font-family: cursive;
+}
+
+.score {
+  text-align: center;
+  font-family:  cursive;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.matchStatus {
+  margin: 10px;
+  padding: 10px;
+  font-family:  cursive;
+}
+
 main {
   width: 600px;
   height: 600px;
@@ -49,15 +73,4 @@ footer {
   background-color: #D5B9B2;
   font-family: sans-serif;
   float:  none;
-}
-
-p {
-  text-align: center;
-}
-
-.score {
-  text-align: center;
-  font-family:  'Monoton', cursive;
-  font-size: 20px;
-  padding: 20px;
 }
