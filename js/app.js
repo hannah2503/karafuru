@@ -1,72 +1,74 @@
 $(() => {
 
-  const $userArray = [];
-  const $squareSequence = [];
+  let $userArray = [];
+  let $squareSequence = [];
   let delay = 0;
-  const level = 3;
+  let level = 3;
+  let score = 0;
+  let $score = $('.score');
+  const $matchStatus = $('.matchStatus');
+
   const $square = $('.square');
   const $lis = $('li');
   const $playButton = $('button');
-  const colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
-  const randomColor = colors[Math.floor(Math.random() *colors.length)];
+  const $nextGame =$('.nextGame');
+
+  let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
   const originColor = '#FE938C';
-  const $score = $('.score');
-  // let $timer = $('.timer');
-  // const timer = 10;
+
+  let randomColor = [];
+  // const randomColor = colors[Math.floor(Math.random() * colors.length) +1];
+
+  // console.log(randomColor);
 
   function shuffle() {
     for (let i = 0; i < level; i++){
       $squareSequence.push(Math.floor(Math.random()* 8)+1);
-    } shuffle;
+    }
+    console.log('squareSecquence---->', $squareSequence);
   }
   shuffle();
-  console.log($squareSequence);
-
-  // function computerPlay() {
-  //   $squareSequence['i'].css('background-color', `${randomColor}`);
-  // }
-  //
-  // const myVar = setInterval(function(){
-  //   computerPlay();
-  // }, 300);
-  //
-  //
-  // function stopColor() {
-  //   clearInterval(myVar);
-  // }
-  //
-  // function stopSequence(){
-  //   if ($squareSequence === (level.length -1)){
-  //     stopColor();
-  //   }else{
-  //     console.log($squareSequence);
-  //   }
-  // }
 
 
   function computerPlay() {
+    console.log(`computerplay im hit --> ${$squareSequence.length} `);
+
+    for (var j = 0; j < 3; j++) {
+      const newRandom = Math.floor(Math.random() * colors.length);
+      randomColor.push(colors[newRandom]);
+      colors.splice(newRandom, 1);
+    }
+
+    console.log('randomColorArray ----->', randomColor);
+
+    colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
+
     for (var i = 0; i < $squareSequence.length; i++) {
+      const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
-      const randomColor = colors[Math.floor(Math.random() *colors.length)];
-      console.log(randomColor);
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${randomColor}`);
+        $(singleSquare).css('background-color', `${colorToAssign}`);
       }, delay);
       delay += 500;
     }
   }
 
   function clearDisplay() {
+    console.log('cleardisplay im hit');
     for (var i = 0; i < $lis.length; i++) {
       const singleSquare = $lis[i];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${originColor}`);
       },  2500);
     }
+
+    userPlay();
   }
 
   function userPlay() {
+    console.log('userplay im hit');
     $square.on('click', function(){
+      $(this).css('background-color',`${randomColor}`);
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
       if($userArray.length === 3){
@@ -79,28 +81,66 @@ $(() => {
   }
 
   function comparison(){
-    const $matchStatus = $('.matchStatus');
+
     const arr1 = $userArray.toString();
     const arr2 = $squareSequence.toString();
     if (arr1 === arr2){
       console.log('match!');
       $matchStatus.text('It\'s a match!');
-      $score.text(+1);
+      $score.text(`${score += 1}`);
+      $nextGame.css('display','block');
+
+      setTimeout(() => {
+        reset();
+        shuffle();
+        setTimeout(() => {
+          playAgain();
+        }, 1000);
+      }, 1000);
     } else {
       console.log('not a match');
-      $matchStatus.text('Not a match!!');
-      $score.text(-1);
+      $matchStatus.text('Game Over');
+      gameReset();
     }
   }
 
   $playButton.on('click', function() {
     computerPlay();
     clearDisplay();
-    userPlay();
-
+    // userPlay();
   });
 
+  function playAgain(){
+    console.log('playagain im hit');
+    // reset();
+    // shuffle();
+    $square.off('click');
+    computerPlay();
+    clearDisplay();
+    // userPlay();
+  }
 
+  // $nextGame.on('click', function (){
+  //   playAgain();
+  // });
+
+  function reset (){
+    console.log('reset im hit');
+    $matchStatus.text('');
+    delay = 0;
+    $userArray =[];
+    $squareSequence =[];
+    randomColor = [];
+
+
+  }
+
+  function gameReset(){
+    $score.text('0');
+    score = 0;
+    $userArray =[];
+    $squareSequence =[];
+  }
 
 
 });

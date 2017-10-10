@@ -8,6 +8,41 @@
 //user clicks the sequence and computer stores the input
 //comparison between computer sequence and user input - if correct new sequence plays, if not, alert game over, try again.
 //
+
+
+  // function computerPlay() {
+  //   $squareSequence['i'].css('background-color', `${randomColor}`);
+  // }
+  //
+  // const myVar = setInterval(function(){
+  //   computerPlay();
+  // }, 300);
+  //
+  //
+  // function stopColor() {
+  //   clearInterval(myVar);
+  // }
+  //
+  // function stopSequence(){
+  //   if ($squareSequence === (level.length -1)){
+  //     stopColor();
+  //   }else{
+  //     console.log($squareSequence);
+  //   }
+  // }
+
+var myVar = setInterval(function(){ setColor() }, 300);
+
+function setColor() {
+    var x = document.body;
+    x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+}
+
+function stopColor() {
+    clearInterval(myVar);
+}
+
+
 function playAnswer(){
     // const difficultyLevel = parseInt($('#difficulty').find(':selected').val());
     // $('#reset').prop('disabled',true);
