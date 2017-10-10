@@ -14,6 +14,7 @@ $(() => {
   const originColor = '#FE938C';
   let randomColor = [];
 
+  //generate a shuffled array of lis
   function shuffle() {
     for (let i = 0; i < level; i++){
       $squareSequence.push(Math.floor(Math.random()* 8)+1);
@@ -21,6 +22,7 @@ $(() => {
     console.log('squareSecquence---->', $squareSequence);
   }
   shuffle();
+  //computer shows a sequence of colors
   function computerPlay() {
     console.log(`computerplay im hit --> ${$squareSequence.length} `);
     //random color generator
@@ -51,10 +53,10 @@ $(() => {
       },  2000);
     }
     //call function to allow user to play
-    setTimeout(() => {
-      userPlay();
-    }, 1000);
-    
+    // setTimeout(() => {
+    //   userPlay();
+    // }, 2000);
+    //
   }
   //function which logs user play
   function userPlay() {
@@ -66,6 +68,7 @@ $(() => {
       if($userArray.length === 3){
         console.log($userArray);
         comparison();
+
       } else{
         console.log('keep clicking!');
       }
@@ -77,34 +80,40 @@ $(() => {
     const arr2 = $squareSequence.toString();
     if (arr1 === arr2){
       console.log('match!');
-      $matchStatus.text('It\'s a match!');
+      $matchStatus.text('IT\'S A MATCH!');
       $score.text(`${score += 1}`);
       setTimeout(() => {
         reset();
         shuffle();
         setTimeout(() => {
           playAgain();
-        }, 1000);
-      }, 2000);
+        }, 2000);
+      }, 2500);
     } else {
       console.log('not a match');
-      $matchStatus.text('Game Over');
+      $matchStatus.text('GAME OVER');
       setTimeout(() => {
         gameReset();
         shuffle();
-      }, 1000);
+      }, 2000);
     }
   }
   //function to start game
   $button.on('click', function() {
+    console.log('lets play!');
     computerPlay();
     clearDisplay();
+    userPlay();
   });
   //function to call next sequence in game
   function playAgain(){
     $square.off('click');
-    computerPlay();
     clearDisplay();
+    setTimeout(()=>{
+      computerPlay();
+      userPlay();
+      clearDisplay();
+    }, 3000);
   }
   //reset for when play continues
   function reset (){
@@ -122,6 +131,16 @@ $(() => {
     $userArray =[];
     $squareSequence =[];
     randomColor=[];
+    function clearDisplay() {
+      console.log('cleardisplay im hit');
+      for (var i = 0; i < $lis.length; i++) {
+        const singleSquare = $lis[i];
+        setTimeout(() => {
+          $(singleSquare).css('background-color', `${originColor}`);
+        },  2000);
+      }
+    }
+    clearDisplay();
   }
 
 });

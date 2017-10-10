@@ -9,7 +9,7 @@ h1 {
   font-family: 'Monoton', cursive;
   margin: 50px;
   padding: 20px;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 p {
@@ -20,20 +20,20 @@ p {
 .score-board {
   margin: 10px;
   padding: 10px;
-  font-family: cursive;
+  font-family: 'Nunito', sans-serif;
+  font-size: 40px;
 }
 
 .score {
   text-align: center;
-  font-family:  cursive;
-  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
   padding: 20px;
 }
 
 .matchStatus {
   margin: 10px;
   padding: 10px;
-  font-family:  cursive;
+  font-family: 'Nunito', sans-serif;
 }
 
 main {
@@ -51,7 +51,7 @@ li {
   background-color: #FE938C;
   color: #EEEFD7;
   float: left;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 196px;
   font-size: 30px;
   text-align: center;
@@ -59,7 +59,7 @@ li {
 
 button {
   padding: 20px;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 20px;
   color: white;
   background-color: #9D91A3;
@@ -71,7 +71,7 @@ button {
 footer {
 background-color: #D5B9B2;
 float:  none;
-font-family: sans-serif;
+font-family: 'Nunito', sans-serif;
 margin: 200px 150px;
 padding: 10px;
 }
