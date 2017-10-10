@@ -69,9 +69,9 @@ button {
 
 
 footer {
-  margin: 200px 150px;
-  padding: 10px;
-  background-color: #D5B9B2;
-  font-family: sans-serif;
-  float:  none;
+background-color: #D5B9B2;
+float:  none;
+font-family: sans-serif;
+margin: 200px 150px;
+padding: 10px;
 }
