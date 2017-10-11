@@ -22,6 +22,7 @@ $(() => {
     console.log('lets play!');
     $matchStatus.text('Let\'s Play!');
     computerPlay();
+    $button.css('display', 'none');
   }
 
   function computerPlay(){
@@ -41,7 +42,7 @@ $(() => {
       const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).css('background-color',  `${originColor}`).fadeIn(200);
+        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(600).fadeOut(500).css('background-color',  `${originColor}`).fadeIn(200);
       }, delay);
       delay += 500;
     } clearDisplay();
@@ -105,6 +106,7 @@ $(() => {
     $userArray =[];
     $squareSequence =[];
     randomColor = [];
+
   }
 
   function gameReset(){
@@ -118,6 +120,7 @@ $(() => {
     $userArray =[];
     $squareSequence =[];
     randomColor=[];
+    $button.css('display', 'block');
   }
 
 
