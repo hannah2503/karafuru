@@ -1,6 +1,7 @@
 body {
   background: #C4B7CB;
-
+  text-align: center;
+  font-size: 30px;
 }
 
 header, footer{
@@ -18,14 +19,40 @@ h1 {
   font-family: 'Monoton', cursive;
   color: #F7D6E0;
   text-align: center;
-  /*margin: 30px;
-  padding: 20px;*/
   font-size: 70px;
 }
 
-p {
+
+.score-board {
+  width: 500px;
+  height: 120px;
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 40px;
+  font-family: 'Poiret One', cursive;
+  line-height: 60px;
+}
+
+.level {
   text-align: center;
-  font-size: 30px;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Poiret One', cursive;
+}
+
+.score {
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Poiret One', cursive;
+}
+
+.matchStatus {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Poiret One', cursive;
+  font-size:  40px;
+  text-align: center;
 }
 
 main {
@@ -43,7 +70,7 @@ ul {
   height: 600px;
   margin: 0 auto;
   background-color: #C4B7CB;
-  /*padding: 10px;*/
+  padding: 10px 0;
   position: relative;
   display: block;
 }
@@ -83,39 +110,4 @@ footer {
   font-variant-caps: small-caps;
   height:100px;
   bottom:0;
-}
-
-
-
-
-.score-board {
-  width: 500px;
-  height: 120px;
-  margin: 5px auto;
-  padding: 5px;
-  font-size: 40px;
-  font-family: 'Poiret One', cursive;
-  line-height: 60px;
-}
-
-.level {
-  text-align: center;
-  padding: 10px;
-  margin: 20px;
-  font-family: 'Poiret One', cursive;
-}
-
-.score {
-  text-align: center;
-  padding: 10px;
-  margin: 20px;
-  font-family: 'Poiret One', cursive;
-}
-
-.matchStatus {
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Poiret One', cursive;
-  font-size:  40px;
-  text-align: center;
 }
