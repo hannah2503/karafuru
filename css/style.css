@@ -29,6 +29,12 @@ p {
   font-family: 'Poiret One', cursive;
 }
 
+.level{
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poiret One', cursive;
+}
+
 
 .matchStatus {
   margin: 10px;

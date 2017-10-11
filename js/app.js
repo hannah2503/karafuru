@@ -3,7 +3,9 @@ $(() => {
   let $userArray = [];
   let $squareSequence = [];
   let delay = 0;
-  let level = 3;
+  let pattern = 3;
+  const $level = $('.level');
+  let level = 0;
   let score = 0;
   const $score = $('.score');
   const $matchStatus = $('.matchStatus');
@@ -24,12 +26,12 @@ $(() => {
 
   function computerPlay(){
     function shuffleLis(){
-      for (let i = 0; i < level; i++){
+      for (let i = 0; i < pattern; i++){
         $squareSequence.push(Math.floor(Math.random()* 8)+1);
       }
     } shuffleLis();
     console.log($squareSequence);
-    for (var j = 0; j < level; j++) {
+    for (var j = 0; j < pattern; j++) {
       const newRandom = Math.floor(Math.random() * colors.length);
       randomColor.push(colors[newRandom]);
       colors.splice(newRandom, 1);
@@ -42,9 +44,10 @@ $(() => {
         $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).css('background-color',  `${originColor}`).fadeIn(200);
       }, delay);
       delay += 500;
-      // } clearDisplay();
-    }
+    } clearDisplay();
   }
+
+
   function clearDisplay(){
     for (var i = 0; i < $lis.length; i++) {
       const singleSquare = $lis[i];
@@ -59,10 +62,10 @@ $(() => {
   function userPlay(){
     $square.off('click');
     $square.on('click', function(){
-      $(this).css('background-color','#9C89B8').fadeIn(500).fadeOut(500).fadeIn(500);
+      $(this).css('background-color','#9C89B8').fadeIn(500).fadeOut(500).fadeIn(200);
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
-      if($userArray.length === level){
+      if($userArray.length === pattern){
         console.log($userArray);
         comparison();
       } else{
@@ -93,9 +96,12 @@ $(() => {
   }
 
   function reset (){
+    if (score % 4 === 0 ){
+      pattern += 1;
+    }
     $matchStatus.text('');
     delay = 0;
-    level += 1;
+    $level.text(`${level += 1}`);
     $userArray =[];
     $squareSequence =[];
     randomColor = [];
@@ -104,8 +110,10 @@ $(() => {
   function gameReset(){
     clearDisplay();
     $score.text('0');
+    $level.text('0');
     $matchStatus.text('Try Again!');
     score = 0;
+    pattern = 0;
     delay = 0;
     $userArray =[];
     $squareSequence =[];
