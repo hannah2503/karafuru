@@ -19,8 +19,7 @@ $(() => {
   $button.on('click', play);
 
   function play(){
-    console.log('squaresequence just clicked on play',  $squareSequence);
-    $matchStatus.css('display', 'block').text('Play!');
+    $matchStatus.css('display', 'block').text('PLAY');
     setTimeout(()=>{
       $matchStatus.css('display', 'none');
     },500);
@@ -31,15 +30,12 @@ $(() => {
   }
 
   function computerPlay(){
-    console.log('squaresequence computerplay has been called',  $squareSequence);
     function shuffleLis(){
-      console.log('am I not being called???');
       for (let i = 0; i < pattern; i++){
         $squareSequence.push(Math.floor(Math.random()* 8)+1);
       }
     }
     shuffleLis();
-    console.log('squaresequence now should be full riiiight???',  $squareSequence);
     for (var j = 0; j < pattern; j++) {
       const newRandom = Math.floor(Math.random() * colors.length);
       randomColor.push(colors[newRandom]);
@@ -72,10 +68,8 @@ $(() => {
     $square.off('click');
     $square.on('click', function(){
       $(this).css('background-color','#9C89B8').fadeIn(500).fadeOut(500).fadeIn(200);
-      console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
       if($userArray.length === pattern){
-        console.log($userArray);
         comparison();
       } else{
         console.log('keep clicking!');
@@ -88,27 +82,28 @@ $(() => {
     const arr2 = $squareSequence.toString();
     if (arr1 === arr2){
       setTimeout(() => {
-        $matchStatus.css('display', 'block').text('IT\'S A MATCH!');
+        $matchStatus.css('display', 'block').text('IT\'S A MATCH');
         $score.text(`${score += 1}`);
       }, 1000);
       setTimeout(()=> {
         $matchStatus.css('display', 'none');
         clearDisplay();
         reset();
-      }, 2000);
+      }, 1500);
       setTimeout(()=>{
         play();
-      },4000);
+      },3000);
     } else {
-      $matchStatus.css('display', 'block').text('GAME OVER');
       setTimeout(()=>{
-        $matchStatus.css('display', 'none');
+        $matchStatus.css('display', 'block').text('GAME OVER');
+      }, 1000);
+      $matchStatus.css('display', 'none');
+      setTimeout(()=>{
         gameReset();
-      }, 2000);
+
+      }, 2500);
     }
   }
-
-
 
   function reset (){
     if (score % 4 === 0 ){
@@ -130,19 +125,16 @@ $(() => {
     }
   }
   function gameReset(){
-    console.log('game over - reset game');
-    console.log('squaresequence just after reset',  $squareSequence);
     clearDisplay();
     $score.text('0');
     $level.text('0');
-    $matchStatus.text('Try Again!');
+    $matchStatus.text('BAD LUCK, TRY AGAIN');
     score = 0;
     level = 0;
     pattern = 3;
     delay = 0;
     $userArray =[];
     $squareSequence =[];
-    console.log('squaresequence now I emptied it',  $squareSequence);
     randomColor=[];
     $button.css('display', 'block');
 
