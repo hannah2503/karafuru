@@ -11,15 +11,32 @@ header, footer {
 }
 
 header{
-  height: 400px;
-  line-height: 150px;
+  height: 250px;
+  line-height: 90px;
 }
 
 h1 {
   font-family: 'Monoton', cursive;
   color: #C52184;
-  text-align: center;
   font-size: 70px;
+  float:left;
+  padding-left: 100px;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 90px;
+  width: 100%;
+  clear: right;
+}
+
+.navitems {
+  font-size: 30px;
+  float:right;
+  line-height: 90px;
+  padding-right: 100px;
+  font-family: 'Poiret One', cursive;
+  font-variant: small-caps;
 }
 
 main {
@@ -34,9 +51,10 @@ main {
 .score-board {
   width: 350px;
   height: 120px;
-  margin: 0 auto;
+  margin: 50px auto;
   font-size: 40px;
   font-family: 'Poiret One', cursive;
+  font-variant: small-caps;
   line-height: 60px;
 }
 
@@ -66,7 +84,7 @@ main {
   display: none;
 }
 
-ul {
+.grid {
   width: 600px;
   height: 600px;
   margin: 0 auto;
@@ -76,7 +94,7 @@ ul {
   display: block;
 }
 
-li {
+.square {
   width:  196px;
   height: 196px;
   margin: 2px;
