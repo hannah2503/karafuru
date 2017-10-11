@@ -22,6 +22,7 @@ $(() => {
     console.log('squareSecquence---->', $squareSequence);
   }
   shuffle();
+
   //computer shows a sequence of colors
   function computerPlay() {
     console.log(`computerplay im hit --> ${$squareSequence.length} `);
@@ -68,7 +69,6 @@ $(() => {
       if($userArray.length === 3){
         console.log($userArray);
         comparison();
-
       } else{
         console.log('keep clicking!');
       }
@@ -109,10 +109,12 @@ $(() => {
   function playAgain(){
     $square.off('click');
     clearDisplay();
+    console.log('clear display active');
     setTimeout(()=>{
       computerPlay();
       userPlay();
       clearDisplay();
+      console.log('clear display active again');
     }, 3000);
   }
   //reset for when play continues
@@ -126,20 +128,21 @@ $(() => {
   //reset for when it's game over
   function gameReset(){
     $score.text('0');
+    $matchStatus.css('display', 'none');
     score = 0;
     delay = 0;
     $userArray =[];
     $squareSequence =[];
     randomColor=[];
-    function clearDisplay() {
-      console.log('cleardisplay im hit');
-      for (var i = 0; i < $lis.length; i++) {
-        const singleSquare = $lis[i];
-        setTimeout(() => {
-          $(singleSquare).css('background-color', `${originColor}`);
-        },  2000);
-      }
-    }
+    // function clearDisplay() {
+    //   console.log('cleardisplay im hit');
+    //   for (var i = 0; i < $lis.length; i++) {
+    //     const singleSquare = $lis[i];
+    //     setTimeout(() => {
+    //       $(singleSquare).css('background-color', `${originColor}`);
+    //     },  2000);
+    //   }
+    // }
     clearDisplay();
   }
 
