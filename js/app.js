@@ -43,12 +43,12 @@ $(() => {
       // }, 1000);
       // clearInterval(setInterval);
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).fadeIn(900);
+        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).css('background-color',  `${originColor}`).fadeIn(200);
       }, delay);
       delay += 500;
-    } clearDisplay();
+      // } clearDisplay();
+    }
   }
-
   function clearDisplay(){
     for (var i = 0; i < $lis.length; i++) {
       const singleSquare = $lis[i];
