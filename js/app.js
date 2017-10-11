@@ -50,10 +50,11 @@ $(() => {
       const singleSquare = $lis[i];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${originColor}`);
-      },  2000);
-      userPlay();
+      },  1500);
     }
   }
+
+  userPlay();
 
   function userPlay(){
     $square.off('click');
@@ -76,19 +77,32 @@ $(() => {
     if (arr1 === arr2){
       $matchStatus.text('IT\'S A MATCH!');
       $score.text(`${score += 1}`);
+
       setTimeout(()=> {
+        clearDisplay();
+        reset();
+      }, 500);
+      setTimeout(()=>{
         play();
-      }, 4000);
+      },2000);
     } else {
       $matchStatus.text('GAME OVER');
       setTimeout(()=>{
         gameReset();
-      }, 1500);
+      }, 2000);
     }
   }
 
+  function reset (){
+    $matchStatus.text('');
+    delay = 0;
+    $userArray =[];
+    $squareSequence =[];
+    randomColor = [];
+  }
 
   function gameReset(){
+    clearDisplay();
     $score.text('0');
     $matchStatus.text('Try Again!');
     score = 0;
