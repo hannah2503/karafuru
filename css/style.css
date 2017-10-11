@@ -4,15 +4,10 @@ body {
   font-size: 30px;
 }
 
-header, footer {
-  position:absolute;
-  right:0;
-  left:0;
-}
-
 header{
-  height: 250px;
+  height: 300px;
   line-height: 90px;
+  background-color: pink;
 }
 
 h1 {
@@ -20,7 +15,7 @@ h1 {
   color: #C52184;
   font-size: 70px;
   float:left;
-  padding-left: 100px;
+  padding-left: 200px;
 }
 
 .navbar {
@@ -34,7 +29,7 @@ h1 {
   font-size: 30px;
   float:right;
   line-height: 90px;
-  padding-right: 100px;
+  padding-right: 200px;
   font-family: 'Poiret One', cursive;
   font-variant: small-caps;
 }
@@ -42,7 +37,6 @@ h1 {
 main {
   width: 700px;
   height: 700px;
-  padding: 300px;
   margin: 0 auto;
   background-color: #C4B7CB;
   overflow:hidden;
@@ -109,7 +103,7 @@ main {
 }
 
 button {
-  margin: auto;
+  margin: 0 auto;
   padding: 10px;
   font-size: 28px;
   color: white;
@@ -121,12 +115,143 @@ button {
 }
 
 footer {
-  background-color: #C4B7CB;
-  float:  none;
-  margin: 30px;
-  padding: 10px;
+  background-color: pink;
+  float: none;
   font-family: 'Poiret One', cursive;
   font-variant-caps: small-caps;
-  height:100px;
-  bottom:0;
+  height: 90px;
+  line-height: 90px;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: #C4B7CB;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  header{
+    height: 25%;
+    /*line-height: 90px;*/
+    background-color: pink;
+  }
+
+  h1 {
+    font-family: 'Monoton', cursive;
+    color: #C52184;
+    font-size: 30px;
+    float:left;
+    padding-left: 20px;
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 28px;
+    width: 500px;
+    clear: right;
+  }
+
+  .navitems {
+    font-size: 15px;
+    float:right;
+    /*line-height: 90px;*/
+    padding-right: 20px;
+    font-family: 'Poiret One', cursive;
+    font-variant: small-caps;
+  }
+
+  main {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #C4B7CB;
+    overflow:hidden;
+
+  }
+  .score-board {
+    width: 500px;
+    height: 125px;
+    margin: 25px auto;
+    font-size: 20px;
+    font-family: 'Poiret One', cursive;
+    font-variant: small-caps;
+    line-height: 60px;
+    background-color: pink;
+    float:left;
+  }
+
+  .level {
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Poiret One', cursive;
+  }
+
+  .score {
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Poiret One', cursive;
+  }
+
+  .matchStatus {
+    font-family: 'Poiret One', cursive;
+    font-size:  20px;
+    text-align: center;
+    position: absolute;
+    background: rgba(255, 224, 181, 0.3);
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    display: none;
+  }
+
+  .grid {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #C4B7CB;
+    padding: 10px 0;
+    position: relative;
+    display: block;
+  }
+
+  .square {
+    width:  96px;
+    height: 96px;
+    margin: 2px;
+    background-color: #FE938C;
+    color: #F7D6E0;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    line-height: 96px;
+    font-family: 'Poiret One', cursive;
+    font-variant-caps: small-caps;
+  }
+
+  button {
+    margin: 2px auto;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: #9D91A3;
+    border-radius: 20px;
+    display: block;
+
+    font-family: 'Poiret One', cursive;
+    font-variant-caps: small-caps;
+  }
+
+  footer {
+    background-color: pink;
+    /*float: none;*/
+    font-family: 'Poiret One', cursive;
+    font-variant-caps: small-caps;
+    height: 90px;
+    line-height: 90px;
+    /*bottom: 0;*/
+  }
+
 }
