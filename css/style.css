@@ -1,9 +1,10 @@
 body {
   background: #D5B9B2;
-  font-family: 'Monoton', cursive;
+
 }
 
 h1 {
+  font-family: 'Monoton', cursive;
   color: #9D91A3;
   text-align: center;
   margin: 30px;
@@ -17,20 +18,26 @@ p {
 
 
 .score-board {
-  margin: 5px;
+  width: 500px;
+  height: 120px;
+  border: 2px solid black;
+  margin: 5px auto;
   padding: 5px;
   font-size: 40px;
   font-family: 'Poiret One', cursive;
+  font-variant-caps: small-caps;
 }
 
-.score {
+.level {
   text-align: center;
   padding: 20px;
+  margin: 10px;
   font-family: 'Poiret One', cursive;
 }
 
-.level{
+.score{
   text-align: center;
+  margin: 10px;
   padding: 20px;
   font-family: 'Poiret One', cursive;
 }
@@ -40,13 +47,15 @@ p {
   margin: 10px;
   padding: 10px;
   font-family: 'Poiret One', cursive;
+  font-size:  150px;
+  text-align: center;
 }
 
 main {
-width: 700px;
-height: 700px;
-margin: 0 auto;
-background-color: #D5B9B2;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #D5B9B2;
 
 }
 
@@ -56,6 +65,8 @@ ul {
   margin: 0 auto;
   background-color: #D5B9B2;
   padding: 10px;
+  position: relative;
+  display: block;
 }
 
 li {
@@ -69,6 +80,7 @@ li {
   font-size: 30px;
   text-align: center;
   font-family: 'Poiret One', cursive;
+  font-variant-caps: small-caps;
 }
 
 button {
@@ -80,12 +92,14 @@ button {
   border-radius: 20px;
   display: block;
   font-family: 'Poiret One', cursive;
+  font-variant-caps: small-caps;
 }
 
 footer {
-background-color: #D5B9B2;
-float:  none;
-margin: 140px 150px;
-padding: 10px;
-font-family: 'Poiret One', cursive;
+  background-color: #D5B9B2;
+  float:  none;
+  margin: 50px;
+  padding: 10px;
+  font-family: 'Poiret One', cursive;
+  font-variant-caps: small-caps;
 }
