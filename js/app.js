@@ -3,7 +3,7 @@ $(() => {
   let $userArray = [];
   let $squareSequence = [];
   let delay = 0;
-  const level = 3;
+  let level = 3;
   let score = 0;
   const $score = $('.score');
   const $matchStatus = $('.matchStatus');
@@ -38,10 +38,6 @@ $(() => {
     for (var i = 0; i < $squareSequence.length; i++) {
       const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
-      // setInterval(()=>{
-      //   $(singleSquare).css('background-color', `${colorToAssign}`);
-      // }, 1000);
-      // clearInterval(setInterval);
       setTimeout(() => {
         $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).css('background-color',  `${originColor}`).fadeIn(200);
       }, delay);
@@ -66,7 +62,7 @@ $(() => {
       $(this).css('background-color','#9C89B8').fadeIn(500).fadeOut(500).fadeIn(500);
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
-      if($userArray.length === 3){
+      if($userArray.length === level){
         console.log($userArray);
         comparison();
       } else{
@@ -99,6 +95,7 @@ $(() => {
   function reset (){
     $matchStatus.text('');
     delay = 0;
+    level += 1;
     $userArray =[];
     $squareSequence =[];
     randomColor = [];
