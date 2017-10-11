@@ -1,13 +1,12 @@
 body {
   background: #D5B9B2;
-
+  font-family: 'Monoton', cursive;
 }
 
 h1 {
   color: #9D91A3;
   text-align: center;
-  font-family: 'Monoton', cursive;
-  margin: 50px;
+  margin: 30px;
   padding: 20px;
   font-size: 60px;
 }
@@ -18,30 +17,39 @@ p {
 
 
 .score-board {
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Nunito', sans-serif;
+  margin: 5px;
+  padding: 5px;
   font-size: 40px;
+  font-family: 'Poiret One', cursive;
 }
 
 .score {
   text-align: center;
-  font-family: 'Nunito', sans-serif;
   padding: 20px;
+  font-family: 'Poiret One', cursive;
 }
+
 
 .matchStatus {
   margin: 10px;
   padding: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poiret One', cursive;
 }
 
 main {
+width: 700px;
+height: 700px;
+margin: 0 auto;
+background-color: #D5B9B2;
+
+}
+
+ul {
   width: 600px;
   height: 600px;
-  background-color: #FEF9FF;
   margin: 0 auto;
-
+  background-color: #D5B9B2;
+  padding: 10px;
 }
 
 li {
@@ -51,27 +59,27 @@ li {
   background-color: #FE938C;
   color: #EEEFD7;
   float: left;
-  font-family: 'Nunito', sans-serif;
   line-height: 196px;
   font-size: 30px;
   text-align: center;
+  font-family: 'Poiret One', cursive;
 }
 
 button {
-  padding: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 20px;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
   color: white;
   background-color: #9D91A3;
-  border-radius: 15px;
+  border-radius: 20px;
   display: block;
+  font-family: 'Poiret One', cursive;
 }
-
 
 footer {
 background-color: #D5B9B2;
 float:  none;
-font-family: 'Nunito', sans-serif;
-margin: 200px 150px;
+margin: 140px 150px;
 padding: 10px;
+font-family: 'Poiret One', cursive;
 }

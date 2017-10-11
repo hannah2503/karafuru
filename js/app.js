@@ -38,8 +38,12 @@ $(() => {
     for (var i = 0; i < $squareSequence.length; i++) {
       const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
+      // setInterval(()=>{
+      //   $(singleSquare).css('background-color', `${colorToAssign}`);
+      // }, 1000);
+      // clearInterval(setInterval);
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${colorToAssign}`);
+        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(1000).fadeOut(900).fadeIn(900);
       }, delay);
       delay += 500;
     } clearDisplay();
@@ -59,7 +63,7 @@ $(() => {
   function userPlay(){
     $square.off('click');
     $square.on('click', function(){
-      $(this).css('background-color','#9C89B8');
+      $(this).css('background-color','#9C89B8').fadeIn(500).fadeOut(500).fadeIn(500);
       console.log(this);
       $userArray.push(parseInt($(this).attr('id')));
       if($userArray.length === 3){
@@ -77,7 +81,6 @@ $(() => {
     if (arr1 === arr2){
       $matchStatus.text('IT\'S A MATCH!');
       $score.text(`${score += 1}`);
-
       setTimeout(()=> {
         clearDisplay();
         reset();
