@@ -103,7 +103,7 @@ $(() => {
     $matchStatus.text('');
     delay = 0;
     $level.text(`${level += 1}`);
-    $userArray =[];
+    $userArray = [];
     $squareSequence =[];
     randomColor = [];
 
@@ -122,6 +122,6 @@ $(() => {
     randomColor=[];
     $button.css('display', 'block');
   }
-
+  
 
 });

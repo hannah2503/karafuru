@@ -1,61 +1,40 @@
 body {
-  background: #D5B9B2;
+  background: #C4B7CB;
 
+}
+
+header, footer{
+  position:absolute;
+  right:0;
+  left:0;
+}
+
+header{
+  height: 400px;
+  line-height: 150px;
 }
 
 h1 {
   font-family: 'Monoton', cursive;
-  color: #9D91A3;
+  color: #F7D6E0;
   text-align: center;
-  margin: 30px;
-  padding: 20px;
-  font-size: 60px;
+  /*margin: 30px;
+  padding: 20px;*/
+  font-size: 70px;
 }
 
 p {
   text-align: center;
-}
-
-
-.score-board {
-  width: 500px;
-  height: 120px;
-  border: 2px solid black;
-  margin: 5px auto;
-  padding: 5px;
-  font-size: 40px;
-  font-family: 'Poiret One', cursive;
-  font-variant-caps: small-caps;
-}
-
-.level {
-  text-align: center;
-  padding: 20px;
-  margin: 10px;
-  font-family: 'Poiret One', cursive;
-}
-
-.score{
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  font-family: 'Poiret One', cursive;
-}
-
-
-.matchStatus {
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Poiret One', cursive;
-  font-size:  150px;
-  text-align: center;
+  font-size: 30px;
 }
 
 main {
   width: 700px;
   height: 700px;
+  padding: 300px;
   margin: 0 auto;
-  background-color: #D5B9B2;
+  background-color: #C4B7CB;
+  overflow:hidden;
 
 }
 
@@ -63,8 +42,8 @@ ul {
   width: 600px;
   height: 600px;
   margin: 0 auto;
-  background-color: #D5B9B2;
-  padding: 10px;
+  background-color: #C4B7CB;
+  /*padding: 10px;*/
   position: relative;
   display: block;
 }
@@ -74,7 +53,7 @@ li {
   height: 196px;
   margin: 2px;
   background-color: #FE938C;
-  color: #EEEFD7;
+  color: #F7D6E0;
   float: left;
   line-height: 196px;
   font-size: 30px;
@@ -86,7 +65,7 @@ li {
 button {
   margin: auto;
   padding: 10px;
-  font-size: 18px;
+  font-size: 28px;
   color: white;
   background-color: #9D91A3;
   border-radius: 20px;
@@ -96,10 +75,47 @@ button {
 }
 
 footer {
-  background-color: #D5B9B2;
+  background-color: #C4B7CB;
   float:  none;
   margin: 50px;
   padding: 10px;
   font-family: 'Poiret One', cursive;
   font-variant-caps: small-caps;
+  height:100px;
+  bottom:0;
+}
+
+
+
+
+.score-board {
+  width: 500px;
+  height: 120px;
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 40px;
+  font-family: 'Poiret One', cursive;
+  line-height: 60px;
+}
+
+.level {
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Poiret One', cursive;
+}
+
+.score {
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  font-family: 'Poiret One', cursive;
+}
+
+.matchStatus {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Poiret One', cursive;
+  font-size:  40px;
+  text-align: center;
 }
