@@ -1,3 +1,4 @@
+
 body {
   background: #C4B7CB;
   text-align: center;
@@ -119,9 +120,10 @@ footer {
   float: none;
   font-family: 'Poiret One', cursive;
   font-variant-caps: small-caps;
-  height: 90px;
-  line-height: 90px;
+  position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -133,7 +135,6 @@ footer {
 
   header{
     height: 25%;
-    /*line-height: 90px;*/
     background-color: pink;
   }
 
@@ -155,7 +156,6 @@ footer {
   .navitems {
     font-size: 15px;
     float:right;
-    /*line-height: 90px;*/
     padding-right: 20px;
     font-family: 'Poiret One', cursive;
     font-variant: small-caps;
@@ -208,8 +208,8 @@ footer {
   }
 
   .grid {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
     background-color: #C4B7CB;
     padding: 10px 0;
@@ -218,15 +218,15 @@ footer {
   }
 
   .square {
-    width:  96px;
-    height: 96px;
+    width:  126px;
+    height: 126px;
     margin: 2px;
     background-color: #FE938C;
     color: #F7D6E0;
     float: left;
     font-size: 20px;
     text-align: center;
-    line-height: 96px;
+    line-height: 126px;
     font-family: 'Poiret One', cursive;
     font-variant-caps: small-caps;
   }
@@ -239,19 +239,19 @@ footer {
     background-color: #9D91A3;
     border-radius: 20px;
     display: block;
-
     font-family: 'Poiret One', cursive;
     font-variant-caps: small-caps;
   }
 
   footer {
     background-color: pink;
-    /*float: none;*/
+    float: none;
     font-family: 'Poiret One', cursive;
     font-variant-caps: small-caps;
-    height: 90px;
-    line-height: 90px;
-    /*bottom: 0;*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 
 }
