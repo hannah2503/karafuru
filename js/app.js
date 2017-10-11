@@ -2,7 +2,7 @@ $(() => {
 
   let $userArray = [];
   let $squareSequence = [];
-  let delay = 0;
+  let delay = 100;
   let pattern = 3;
   const $level = $('.level');
   let level = 0;
@@ -19,30 +19,38 @@ $(() => {
   $button.on('click', play);
 
   function play(){
-    console.log('lets play!');
-    $matchStatus.text('Let\'s Play!');
-    computerPlay();
-    $button.css('display', 'none');
+    console.log('squaresequence just clicked on play',  $squareSequence);
+    $matchStatus.css('display', 'block').text('Play!');
+    setTimeout(()=>{
+      $matchStatus.css('display', 'none');
+    },500);
+    setTimeout(()=>{
+      computerPlay();
+      $button.css('display', 'none');
+    }, 500);
   }
 
   function computerPlay(){
+    console.log('squaresequence computerplay has been called',  $squareSequence);
     function shuffleLis(){
+      console.log('am I not being called???');
       for (let i = 0; i < pattern; i++){
         $squareSequence.push(Math.floor(Math.random()* 8)+1);
       }
-    } shuffleLis();
-    console.log($squareSequence);
+    }
+    shuffleLis();
+    console.log('squaresequence now should be full riiiight???',  $squareSequence);
     for (var j = 0; j < pattern; j++) {
       const newRandom = Math.floor(Math.random() * colors.length);
       randomColor.push(colors[newRandom]);
       colors.splice(newRandom, 1);
     }
-    colors = ['#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
+    colors = ['#899D78', '#F0BCD4','#DA4167', '#8A1C7C', '#1F0322'];
     for (var i = 0; i < $squareSequence.length; i++) {
       const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(600).fadeOut(500).css('background-color',  `${originColor}`).fadeIn(200);
+        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(100).fadeOut(100).fadeIn(100);
       }, delay);
       delay += 500;
     } clearDisplay();
@@ -54,7 +62,7 @@ $(() => {
       const singleSquare = $lis[i];
       setTimeout(() => {
         $(singleSquare).css('background-color', `${originColor}`);
-      },  1500);
+      },  2000);
     }
   }
 
@@ -79,49 +87,66 @@ $(() => {
     const arr1 = $userArray.toString();
     const arr2 = $squareSequence.toString();
     if (arr1 === arr2){
-      $matchStatus.text('IT\'S A MATCH!');
-      $score.text(`${score += 1}`);
+      setTimeout(() => {
+        $matchStatus.css('display', 'block').text('IT\'S A MATCH!');
+        $score.text(`${score += 1}`);
+      }, 1000);
       setTimeout(()=> {
+        $matchStatus.css('display', 'none');
         clearDisplay();
         reset();
-      }, 500);
+      }, 2000);
       setTimeout(()=>{
         play();
-      },2000);
+      },4000);
     } else {
-      $matchStatus.text('GAME OVER');
+      $matchStatus.css('display', 'block').text('GAME OVER');
       setTimeout(()=>{
+        $matchStatus.css('display', 'none');
         gameReset();
       }, 2000);
     }
   }
 
+
+
   function reset (){
     if (score % 4 === 0 ){
       pattern += 1;
+      level+=1;
+      $matchStatus.text('');
+      delay = 0;
+      $level.text(`${level}`);
+      $userArray = [];
+      $squareSequence =[];
+      randomColor = [];
+    }else {
+      $matchStatus.text('');
+      delay = 0;
+      $level.text(`${level}`);
+      $userArray = [];
+      $squareSequence =[];
+      randomColor = [];
     }
-    $matchStatus.text('');
-    delay = 0;
-    $level.text(`${level += 1}`);
-    $userArray = [];
-    $squareSequence =[];
-    randomColor = [];
-
   }
-
   function gameReset(){
+    console.log('game over - reset game');
+    console.log('squaresequence just after reset',  $squareSequence);
     clearDisplay();
     $score.text('0');
     $level.text('0');
     $matchStatus.text('Try Again!');
     score = 0;
-    pattern = 0;
+    level = 0;
+    pattern = 3;
     delay = 0;
     $userArray =[];
     $squareSequence =[];
+    console.log('squaresequence now I emptied it',  $squareSequence);
     randomColor=[];
     $button.css('display', 'block');
+
   }
-  
+
 
 });
