@@ -164,7 +164,7 @@ footer {
     width: 375px;
   }
 
-/*header styling*/
+/* iphone header styling*/
   h1 {
     font-size: 42px;
     position: absolute;
@@ -206,7 +206,7 @@ footer {
 
   .option-one, .option-two {
     background: #FFFFFF;
-    background: rgba(255, 224, 181, 0.5);
+    background: rgba(247, 214, 224, 0.5);
     display: block;
   }
 
@@ -221,7 +221,7 @@ footer {
     width:375px;
   }
 
-/*main styling*/
+/*iphone main styling*/
   main {
     width: auto;
   }
@@ -251,7 +251,7 @@ footer {
     width: 100px;
   }
 
-/*footer styling*/
+/* iphone footer styling*/
   footer {
     display: none;
   }
