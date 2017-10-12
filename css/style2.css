@@ -134,9 +134,9 @@ footer {
 
 @media only screen and (max-width: 600px) {
   /*body {
-    background: #C4B7CB;
-    text-align: center;
-    font-size: 15px;
+  background: #C4B7CB;
+  text-align: center;
+  font-size: 15px;
   }*/
 
   header{
@@ -251,16 +251,16 @@ footer {
     font-family: 'Poiret One', cursive;
     font-variant-caps: small-caps;
   }
-/*
+  /*
   footer {
-    background-color: pink;
-    float: none;
-    font-family: 'Poiret One', cursive;
-    font-variant-caps: small-caps;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  background-color: pink;
+  float: none;
+  font-family: 'Poiret One', cursive;
+  font-variant-caps: small-caps;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   }*/
 
 }

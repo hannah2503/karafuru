@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>KaraFuRu</title>
@@ -14,9 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 </head>
-
 <body>
-
   <header>
     <h1>**karafuru**</h1>
     <div class="score-board">
@@ -24,16 +21,31 @@
       <p>LEVEL: <span class="level">0</span></p>
     </div>
     <nav class="navbar">
-      <p class ="navitems"><a href=''#''>INSTRUCTIONS</a></p>
-      <p class ="navitems">&#9734;</p>
-      <p class ="navitems"><a href=''#''>ABOUT</a></p>
+      <a href="#"><div class ="star">
+        &#9734; MENU
+      </div></a>
+      <div class ="option-one">
+        <a href="#"><h2>INSTRUCTIONS</h2></a>
+      </div>
+      <div class ="option-two">
+        <a href="#"><h2>ABOUT</h2></a>
+      </div>
     </nav>
-
-
   </header>
-
   <main>
     <ul class="grid">
+      <div class ="instructions">
+        <h3>How To Play</h3>
+        <h4>**KaraFuru**</h4>
+        <p>is a colourful way to test your memory. The computer will play a sequence on the grid and you have to remember the order in which the squares light up. If you get it right your score will go up and the length of the sequence will increase.</p>
+        <p class="close"><a href="#">X</a></p>
+      </div>
+      <div class="about">
+        <h3>About **KaraFuru** </h3>
+        <p>This game was created as part of the General Assembly Web Development Immersive course. As the first project it consolidates learning from the first two weeks of the 12 week course. I hope you enjoy the game!</p>
+        <br>
+        <p class="close"><a href="#">X</a></p>
+      </div>
       <p class="matchStatus"></p>
       <li class="square" id='0'>0</li>
       <li class="square" id='1'>1</li>
@@ -47,11 +59,8 @@
     </ul>
     <button class= "playButton">Let's Play</button>
   </main>
-
 </body>
-
 <footer>
   <p> &copy; Crossy Studios &#9734;</p>
 </footer>
-
 </html>

@@ -15,6 +15,34 @@ $(() => {
   let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
   const originColor = '#FE938C';
   let randomColor = [];
+  const $star = $('.star');
+  const $optionone = $('.option-one');
+  const $optiontwo = $('.option-two');
+  const $instructions = $('.instructions');
+  const $about = $('.about');
+  const $close = $('.close');
+
+  $star.on('click', function() {
+    $optionone.toggle();
+    $optiontwo.toggle();
+  });
+
+  $optionone.on('click', function() {
+    $instructions.toggle('slow');
+  });
+
+  $close.on('click', function() {
+    $instructions.hide();
+  });
+
+  $optiontwo.on('click', function() {
+    $about.toggle('slow');
+  });
+
+  $close.on('click', function() {
+    $about.hide();
+  });
+
 
   $button.on('click', play);
 
@@ -139,6 +167,8 @@ $(() => {
     $button.css('display', 'block');
 
   }
+
+
 
 
 });
