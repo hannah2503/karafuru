@@ -152,6 +152,7 @@ $(() => {
       randomColor = [];
     }
   }
+  
   function gameReset(){
     clearDisplay();
     $score.text('0');
@@ -167,8 +168,5 @@ $(() => {
     $button.css('display', 'block');
 
   }
-
-
-
 
 });

@@ -5,6 +5,7 @@ html, body {
   width: 100%;
 }
 
+/*header styling*/
 .heading {
   background: #F7D6E0;
   background: rgba(247, 214, 224, 0.5);
@@ -83,6 +84,7 @@ a {
   width: 50px;
 }
 
+/*main styling*/
 main {
   background: #C4B7CB;
   clear: both;
@@ -139,6 +141,7 @@ button {
   width: 150px;
 }
 
+/*footer styling*/
 footer {
   background: #FFFFFF;
   background:  rgba(255, 255, 255, 0.3);
@@ -152,12 +155,13 @@ footer {
   width: 100%;
 }
 
-
+/*iphone screen styling*/
 @media only screen and (max-width: 375px) {
   html, body{
     width: 375px;
   }
 
+/*header styling*/
   h1 {
     font-size: 42px;
     position: absolute;
@@ -214,6 +218,7 @@ footer {
     width:375px;
   }
 
+/*main styling*/
   main {
     width: auto;
   }
@@ -242,7 +247,8 @@ footer {
     height: auto;
     width: 100px;
   }
-
+  
+/*footer styling*/
   footer {
     display: none;
   }
