@@ -1,11 +1,12 @@
 body {
   background: #C4B7CB;
   font-family: 'Poiret One', cursive;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 header {
   background: #F7D6E0;
+  background: rgba(247, 214, 224, 0.5);
   height: 110px;
   margin: auto;
   position: static;
@@ -13,7 +14,6 @@ header {
 }
 
 h1 {
-  background: #F7D6E0;
   color: #C52184;
   float: left;
   font-family: 'Monoton', cursive;
@@ -25,7 +25,6 @@ h1 {
 }
 
 .score-board {
-  background: #F7D6E0;
   float: left;
   font-size: 30px;
   height: 110px;
@@ -35,7 +34,6 @@ h1 {
 }
 
 nav{
-  background: #F7D6E0;
   float: left;
   height: 110px;
   line-height: 110px;
@@ -91,8 +89,6 @@ main {
   width: 600px;
 }
 
-
-
 .square {
   background: #FE938C;
   border: 1px solid #C52184;
@@ -127,7 +123,7 @@ button {
   color: white;
   display: block;
   font-family: 'Poiret One', cursive;
-  font-size: 20px;
+  font-size: 35px;
   font-variant-caps: small-caps;
   height: 70px;
   margin: 0 auto;
@@ -140,7 +136,6 @@ footer {
   bottom: -300px;
   font-size: 30px;
   font-variant-caps: small-caps;
-  height: 70px;
   line-height: 70px;
   margin: 0 auto;
   position: absolute;
