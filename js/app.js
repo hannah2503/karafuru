@@ -22,6 +22,7 @@ $(() => {
   const $about = $('.about');
   const $close = $('.close');
 
+
   $star.on('click', function() {
     $optionone.toggle();
     $optiontwo.toggle();

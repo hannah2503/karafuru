@@ -53,7 +53,10 @@ a {
 }
 
 .option-one, .option-two{
+  background: #FFFFFF;
+  background: rgba(247, 214, 224, 0.5);
   font-size: 30px;
+
 }
 
 .option-one, .option-two, .instructions, .about {
@@ -247,7 +250,7 @@ footer {
     height: auto;
     width: 100px;
   }
-  
+
 /*footer styling*/
   footer {
     display: none;
