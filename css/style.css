@@ -3,7 +3,6 @@ html, body {
   font-family: 'Poiret One', cursive;
   max-height: 100vh;
   width: 100%;
-  /*z-index: -1;*/
 }
 
 .heading {
@@ -26,15 +25,11 @@ h1{
   width: 50%;
 }
 
-.score-container {
-  font-size: 40px;
-}
-
 .score-board {
   background: #F7D6E0;
   background: rgba(247, 214, 224, 0.5);
   float: left;
-  font-size: 30px;
+  font-size: 40px;
   height: 110px;
   line-height: 55px;
   text-align: center;
@@ -45,6 +40,7 @@ nav {
   background: #F7D6E0;
   background: rgba(247, 214, 224, 0.5);
   float: right;
+  font-size: 40px;
   height: 110px;
   line-height: 110px;
   text-align: center;
@@ -52,8 +48,11 @@ nav {
 }
 
 a {
-  font-size: 35px;
   text-decoration: none;
+}
+
+.option-one, .option-two{
+  font-size: 30px;
 }
 
 .option-one, .option-two, .instructions, .about {
@@ -174,9 +173,9 @@ footer {
     width: 50%;
   }
 
-.score-container{
-  height: 20px;
-}
+  .score-container{
+    height: 20px;
+  }
 
   .score-board {
     background: #F7D6E0;
@@ -190,20 +189,18 @@ footer {
   .about, .instructions {
     height: 500px;
     margin: 0 auto;
+    top: 220px;
     width: 375px;
   }
 
   a {
     font-size: 20px;
-    line-height: 20px;
   }
 
   .option-one, .option-two {
     background: #FFFFFF;
-    background: rgba(255, 224, 181, 0.8);
-    position: relative;
-    z-index: 2;
-
+    background: rgba(255, 224, 181, 0.5);
+    display: block;
   }
 
   .option-one, .option-two, .instructions, .about {
@@ -223,8 +220,8 @@ footer {
 
   .square {
     font-size: 20px;
-    line-height: 122.5px;
     height: 122.5px;
+    line-height: 122.5px;
     width: 122.5px;
   }
 
@@ -235,15 +232,15 @@ footer {
   }
 
   .matchStatus {
-    line-height: 375px;
     height: 375px;
+    line-height: 375px;
     width: 375px;
   }
 
   button {
+    font-size: 20px;
     height: auto;
     width: 100px;
-    font-size: 20px;
   }
 
   footer {
