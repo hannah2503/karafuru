@@ -1,6 +1,7 @@
 html, body {
   background: #C4B7CB;
   font-family: 'Poiret One', cursive;
+  max-height: 100vh;
   width: 100%;
 }
 
@@ -203,7 +204,6 @@ footer {
     width: 375px;
 
   }
-
 
   footer {
     bottom: 0;
