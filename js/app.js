@@ -23,8 +23,12 @@ $(() => {
   const $close = $('.close');
 
   $star.on('click', function() {
+    console.log('clicked star');
+
     $optionone.toggle();
+    console.log('option one appears');
     $optiontwo.toggle();
+    console.log('option two appears');
   });
 
   $optionone.on('click', function() {
