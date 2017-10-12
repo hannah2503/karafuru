@@ -161,7 +161,7 @@ footer {
   .about, .instructions {
     height: 500px;
     margin: 0 auto;
-    width: 300px;
+    width: 375px;
 
   }
 
@@ -177,7 +177,7 @@ footer {
   }
 
   .instructions, .about{
-    line-height: 300px;
+    line-height: 360px;
   }
 
   main {
@@ -186,22 +186,24 @@ footer {
 
   .square {
     font-size: 20px;
-    line-height: 96px;
-    height: 96px;
-    width: 96px;
+    line-height: 122.5px;
+    height: 122.5px;
+    width: 122.5px;
   }
 
   .grid {
+    height: 400px;
     margin: 0 auto;
-    width: 300px;
+    width: 375px;
   }
 
   .matchStatus {
-    line-height: 300px;
-    height: 300px;
-    width: 300px;
+    line-height: 375px;
+    height: 375px;
+    width: 375px;
 
   }
+
 
   footer {
     bottom: 0;
