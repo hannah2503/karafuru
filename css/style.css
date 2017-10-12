@@ -1,7 +1,7 @@
-body {
+html, body {
   background: #C4B7CB;
   font-family: 'Poiret One', cursive;
-  /*width: 100%;*/
+  width: 100%;
 }
 
 header {
@@ -21,7 +21,7 @@ h1 {
   height: 110px;
   line-height: 110px;
   text-align: center;
-  width: 32%;
+  width: 33.3%
 }
 
 .score-board {
@@ -30,15 +30,15 @@ h1 {
   height: 110px;
   line-height: 55px;
   text-align: center;
-  width: 32%;
+  width: 33.3%
 }
 
 nav{
   float: left;
   height: 110px;
   line-height: 110px;
-  text-align: right;
-  width: 32%;
+  text-align: center;
+  width: 33.3%
 }
 
 a {
@@ -141,4 +141,65 @@ footer {
   position: absolute;
   text-align: center;
   width: 100%;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+  h1 {
+    display: none;
+  }
+
+  .score-board, nav {
+    background: #F7D6E0;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .about, .instructions {
+    height: 500px;
+    margin: 0 auto;
+    width: 500px;
+
+  }
+
+  .option-one, .option-two {
+    position: relative;
+    z-index: 2;
+
+  }
+
+  .option-one, .option-two, .instructions, .about {
+    display: none;
+    font-size: 10px;
+  }
+
+  main {
+    width: auto;
+  }
+
+  .square {
+    font-size: 20px;
+    line-height: 164px;
+    height: 164px;
+    width: 164px;
+  }
+
+  .grid {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+.matchStatus {
+  line-height: 500px;
+  height: 500px;
+  width: 500px;
+
+}
+
+  footer {
+    bottom: 0;
+  }
 }
