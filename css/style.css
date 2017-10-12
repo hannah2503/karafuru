@@ -71,7 +71,7 @@ a {
   font-weight: bold;
   height: 600px;
   line-height: 75px;
-  margin: 100px auto;
+  margin: 150px auto;
   position: absolute;
   text-align: center;
   top: 110px;
@@ -129,6 +129,7 @@ main {
   position: absolute;
   text-align: center;
   width: 600px;
+  z-index: 3;
 }
 
 button {

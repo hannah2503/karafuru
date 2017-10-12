@@ -12,7 +12,7 @@ $(() => {
   const $square = $('.square');
   const $lis = $('li');
   const $button = $('button');
-  let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#F0E6EF', '#B8BEDD'];
+  let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#B8BEDD'];
   const originColor = '#FE938C';
   let randomColor = [];
   const $star = $('.star');
@@ -158,7 +158,7 @@ $(() => {
     clearDisplay();
     $score.text('0');
     $level.text('0');
-    $matchStatus.text('TRY AGAIN');
+    $matchStatus.text('TRY AGAIN').fadeOut(3000);
     score = 0;
     level = 0;
     pattern = 3;
