@@ -173,7 +173,11 @@ footer {
 
   .option-one, .option-two, .instructions, .about {
     display: none;
-    font-size: 10px;
+    font-size: 20px;
+  }
+
+  .instructions, .about{
+    line-height: 50px;
   }
 
   main {
@@ -192,12 +196,12 @@ footer {
     width: 500px;
   }
 
-.matchStatus {
-  line-height: 500px;
-  height: 500px;
-  width: 500px;
+  .matchStatus {
+    line-height: 500px;
+    height: 500px;
+    width: 500px;
 
-}
+  }
 
   footer {
     bottom: 0;
