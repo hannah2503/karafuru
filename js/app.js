@@ -152,12 +152,12 @@ $(() => {
       randomColor = [];
     }
   }
-  
+
   function gameReset(){
     clearDisplay();
     $score.text('0');
     $level.text('0');
-    $matchStatus.text('BAD LUCK, TRY AGAIN');
+    $matchStatus.text('TRY AGAIN');
     score = 0;
     level = 0;
     pattern = 3;
