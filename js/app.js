@@ -31,6 +31,8 @@ $(() => {
 
   $optionone.on('click', function() {
     $instructions.toggle('slow');
+    $optionone.toggle();
+    $optiontwo.toggle();
   });
 
   $close.on('click', function() {
@@ -39,12 +41,13 @@ $(() => {
 
   $optiontwo.on('click', function() {
     $about.toggle('slow');
+    $optionone.toggle();
+    $optiontwo.toggle();
   });
 
   $close.on('click', function() {
     $about.hide();
   });
-
 
   $button.on('click', play);
 
@@ -82,7 +85,6 @@ $(() => {
       delay += 500;
     } clearDisplay();
   }
-
 
   function clearDisplay(){
     for (var i = 0; i < $lis.length; i++) {
