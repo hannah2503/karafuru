@@ -76,7 +76,7 @@ a {
   text-align: center;
   top: 110px;
   width: 600px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .close {

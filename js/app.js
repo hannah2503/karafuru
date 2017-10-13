@@ -1,27 +1,28 @@
 $(() => {
 
-  let $userArray = [];
-  let $squareSequence = [];
-  let delay = 100;
-  let pattern = 3;
-  const $level = $('.level');
   let level = 0;
   let score = 0;
+  let delay = 100;
+  let pattern = 3;
+  let $userArray = [];
+  let $squareSequence = [];
+  let randomColor = [];
+  let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#B8BEDD'];
+
+  const $level = $('.level');
   const $score = $('.score');
   const $matchStatus = $('.matchStatus');
   const $square = $('.square');
   const $lis = $('li');
   const $button = $('button');
-  let colors = [ '#9C89B8', '#F0A6CA','#EFC3E6', '#B8BEDD'];
   const originColor = '#FE938C';
-  let randomColor = [];
+
   const $star = $('.star');
   const $optionone = $('.option-one');
   const $optiontwo = $('.option-two');
   const $instructions = $('.instructions');
   const $about = $('.about');
   const $close = $('.close');
-
 
   $star.on('click', function() {
     $optionone.toggle();
@@ -75,7 +76,8 @@ $(() => {
       const colorToAssign = randomColor[i];
       const singleSquare =$lis[$squareSequence[i]];
       setTimeout(() => {
-        $(singleSquare).css('background-color', `${colorToAssign}`).fadeIn(100).fadeOut(100).fadeIn(100);
+        $(singleSquare).css('background-color', `${colorToAssign}`);
+        $(singleSquare).addClass('animated', 'tada');
       }, delay);
       delay += 500;
     } clearDisplay();
