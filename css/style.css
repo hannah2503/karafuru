@@ -72,7 +72,7 @@ a {
   font-weight: bold;
   height: 600px;
   line-height: 75px;
-  margin: 150px auto;
+  margin: 120px auto;
   position: absolute;
   text-align: center;
   top: 110px;
@@ -199,7 +199,7 @@ footer {
   .about, .instructions {
     height: 500px;
     margin: 0 auto;
-    top: 220px;
+    top: 210px;
     width: 375px;
   }
 
