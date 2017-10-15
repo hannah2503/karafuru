@@ -27,11 +27,13 @@ I created a simple game with minimalist design in order to focus on the KISS and
 
 The final browser version of the game looks like this: 
 
-[image]<img src="https://imgur.com/bKbrU7S">
+<blockquote class="imgur-embed-pub" lang="en" data-id="bKbrU7S"><a href="//imgur.com/bKbrU7S">View post on imgur.com</a></blockquote>
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="0Y1o0wh"><a href="//imgur.com/0Y1o0wh">View post on imgur.com</a></blockquote>
 
 I used CSS and JavaScript/jQuery to produce a drop down menu which included  "about" and "instructions" sections. 
 
-[image]<img src="https://imgur.com/8mhtieL" width="400">
+<blockquote class="imgur-embed-pub" lang="en" data-id="pmu65sE"><a href="//imgur.com/pmu65sE">View post on imgur.com</a></blockquote>
 
 I then spent time writing a CSS media query to create a mobile version of the game. This was an important aspect for me as I really enjoy CSS styling but also because I felt it was more fun to play this game on my phone than clicking the squares on a web browser. 
 
