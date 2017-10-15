@@ -35,7 +35,7 @@ I used CSS and JavaScript/jQuery to produce a drop down menu which included  "ab
 
 I then spent time writing a CSS media query to create a mobile version of the game. This was an important aspect for me as I really enjoy CSS styling but also because I felt it was more fun to play this game on my phone than clicking the squares on a web browser. 
 
-[image] <blockquote class="imgur-embed-pub" lang="en" data-id="LQnAiX3"><a href="//imgur.com/LQnAiX3">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[image] [Imgur](https://i.imgur.com/LQnAiX3.png)
 
 Features I would add if I had more time:
 <li> robust responsive design</li>
