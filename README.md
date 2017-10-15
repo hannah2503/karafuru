@@ -1,4 +1,4 @@
-[image]<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png">
+<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png">
  
 # WDI_PROJECT_1
 
@@ -27,7 +27,7 @@ I created a simple game with minimalist design in order to focus on the KISS and
 
 The final browser version of the game looks like this: 
 
-[image]<img src="https://imgur.com/bKbrU7S" width="400">
+[image]<img src="https://imgur.com/bKbrU7S">
 
 I used CSS and JavaScript/jQuery to produce a drop down menu which included  "about" and "instructions" sections. 
 
@@ -35,7 +35,7 @@ I used CSS and JavaScript/jQuery to produce a drop down menu which included  "ab
 
 I then spent time writing a CSS media query to create a mobile version of the game. This was an important aspect for me as I really enjoy CSS styling but also because I felt it was more fun to play this game on my phone than clicking the squares on a web browser. 
 
-[image]<img src="https://imgur.com/LQnAiX3" width="400">
+[image] <img src="https://imgur.com/LQnAiX3" width="400">
 
 Features I would add if I had more time:
 <li> robust responsive design</li>
