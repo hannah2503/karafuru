@@ -22,11 +22,10 @@ A readme.md file with explanations of the technologies used, the approach taken,
 After two weeks of lessons on mark-up and code fundamentals I was really excited to be given a project which enabled me to test and consolidate my learning. I chose to make a memory game as it is the sort of game my mother often plays on her mobile. I also felt that the level of complexity would suit my level of confidence in writing Javascript at this stage of the course.
 My game is one where the computer generates a random sequence which flashes on the grid. The user then has to remember the order that the squares appeared and click the same pattern. If correct the score is increased and after 4 points the level goes up with a longer sequence presented. If the user gets the sequence wrong, the game ends.
 
-Deployed version can be found here: https://shielded-reef-22020.herokuapp.com/#
-
+Deployed version can be found here: 
 I created a simple game with minimalist design in order to focus on the KISS and DRY principles we have been instructed to adopt when organising our mark-up and code files. I wanted to keep my code as easy to read as possible and implement best practice in layout and organisation from the outset.
 
-The final browser version of the game looks like this:
+The final browser version of the game looks like this: https://karafuru.herokuapp.com/
 
 ![](image5.png)
 ![](image6.png)
